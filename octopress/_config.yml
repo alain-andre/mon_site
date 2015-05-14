@@ -1,0 +1,40 @@
+# Site settings
+title: Alain ANDRÉ
+email: wordsbybird@gmail.com
+description: > # Il s'agit de mon blog personnel sur lequel j'écris les problèmes et les résolutions de ce qui m'arrive lors de mes développements.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://127.0.0.1" # the base hostname & protocol for your site
+twitter_username: al1_andre
+github_username: alain-andre
+category_dir: categories
+
+# Build settings
+markdown: redcarpet
+assets:
+  compress:
+    css:  sass
+    js:   uglifier
+
+# Delicious
+delicious_user:
+delicious_count: 3
+
+# Disqus Comments
+disqus_short_name: alainandre
+disqus_show_comment_count: false
+
+# Piwik Analytics
+piwik_analytics_tracking_id: UA-7825560-3
+
+# Facebook Like
+facebook_like: true
+
+# Twitter
+twitter_user: al1_andre
+twitter_tweet_button: true
+
+# Github repositories
+github_user: alain-andre
+github_repo_count: 3
+github_show_profile_link: true
+github_skip_forks: true

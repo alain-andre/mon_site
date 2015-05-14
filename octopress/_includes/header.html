@@ -1,0 +1,39 @@
+<header id="topBar">
+  <div class="container">
+    <div class="pull-left hide_mobile">
+      <a class="logo" href="{{ url }}/index.html">
+        <img src="{{ url }}/images/alain_andre.svg" height="80px" />
+      </a> 
+    </div>
+    <div class="pull-right">
+      <a href="mailto:wordsbybird@gmail.com">contact@alain-andre.fr</a>&nbsp;+33 637 700 504
+      <div>
+        <a href="https://www.facebook.com/profile.php?id=100006764265071" target="_blank" class="social fa fa-facebook"></a>
+        <a href="https://twitter.com/al1_andre" target="_blank" class="social fa fa-twitter"></a>
+        <a href="https://github.com/alain-andre" target="_blank" class="social fa fa-github"></a>
+        <section id="search" class="pull-right" ng-controller="SearchCtrl">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <span class="fa fa-search"></span>
+            </span>
+            <input id="search-input" class="form-control" type="text" ng-model="search" size="15" placeholder="Rechercher" autocomplete="off">
+            <ul id="articles-search" class="ng-hide" ng-show="search.length > 1">
+              <li ng-repeat="article in articles | filter:search">
+                <h3>
+                  <a href="[[article.url]]">[[article.title]]</a>
+                </h3>
+                <footer>
+                  <time datetime="[[article.date]]" pubdate>
+                    [[article.date]]
+                  </time>
+
+                  <p>[[article.body]]</p>
+                </footer>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</header>

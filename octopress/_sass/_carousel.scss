@@ -1,0 +1,117 @@
+.carousel {
+  cursor: pointer;
+  margin-bottom: 1em;
+  @include box-shadow(rgba($grey-color, 1) 1px 1px 1em);
+}
+.carousel a {
+  transition: .5s;
+}
+.carousel-inner .item {
+  max-height: 500px;
+  overflow: hidden;
+}
+.carousel-inner .item img {
+  vertical-align: middle;
+  width: 100%;
+  margin-top: -100px;
+}
+.carousel-divs {
+  position: absolute;
+  height: 400px;
+  bottom: 0px;
+  width: 60%;
+  margin-left: 20%;
+  vertical-align: middle;
+}
+.carousel-divs .input-group-addon {
+  color: white;
+  width: 42px;
+}
+.carousel-divs .red, .red p {
+  background-color: rgba($red-color, .6);
+}
+.carousel-divs .blue, .blue p {
+  background-color: rgba($solar-blue, .6);
+}
+.carousel-divs .form-control {
+  background-color: rgba(white, .6);
+  color: $grey-color-dark;
+  text-align: left;
+}
+.carousel-divs .input-group {
+  margin-top: 1em;
+}
+.carousel-caption p {
+  font-size: 1.5em;
+}
+.animate-1, .animate-3, .animate-5, .animate-2, .animate-4 {
+  animation-duration: 3s;
+  width: 100%;
+}
+.active .animate-1, .active .animate-3, .active .animate-5 {
+  /* animation-name: slidein; */
+}
+.active .animate-2, .active .animate-4 {
+  /* animation-name: slideout; */
+}
+.animate-3 {
+  animation-delay: 3s;
+}
+.animate-4 {
+  animation-delay: 3s;
+}
+.animate-5 {
+  animation-delay: 6s;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    margin-left: -100%;
+    width: 300%;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.fa-firefox, .fa-ubuntu, .fa-french-tech, .fa-gnu, .fa-angular, .fa-bootstrap, .fa-ruby-rails {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  text-align: center;
+}
+.fa-firefox {
+  background-image: url(/images/firefox-18.png);
+}
+.fa-ubuntu {
+  background-image: url(/images/ubuntu-18.png);
+}
+.fa-french-tech {
+  background-image: url(/images/french-tech-18.png);
+}
+.fa-gnu {
+  background-image: url(/images/gnu-18.png);
+}
+.fa-angular {
+  background-image: url(/images/angular-18.png);
+}
+.fa-bootstrap {
+  background-image: url(/images/bootstrap-18.png);
+}
+.fa-ruby-rails {
+  background-image: url(/images/ruby-rails-18.png);
+}

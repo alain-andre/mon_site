@@ -1,0 +1,21 @@
+<div class="sharing">
+  {% if site.twitter_tweet_button %}
+  <li>
+    <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true" data-count="none" data-via="{{site.url}}{{post.url}}"> Tweet </a>
+    {% include post/twitter_sharing.html %}
+  </li>
+  {% endif %}
+
+  {% if site.google_plus_one %}
+  <li>
+    <div class="g-plusone pull-left" data-size="{{ site.google_plus_one_size }}"></div>
+  </li>
+  {% endif %}
+
+  {% if site.facebook_like %}
+  <li>
+    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+    {% include post/facebook_like.html %}
+  </li>
+  {% endif %}
+</div>

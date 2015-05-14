@@ -1,0 +1,21 @@
+{% capture category %}
+  {% if post %}{{ post.categories | category_links | size }}{% else %}{{ page.categories | category_links | size }}{% endif %}
+{% endcapture %}
+
+{% unless category == '0' %}
+  {% if post %}
+    {% if post.categories.size > 1 %}
+      <span class="categories"> dans les catégories {{ post.categories | category_links }}</span>
+    {% else %}
+      <span class="categories"> dans la catégorie {{ post.categories | category_links }}</span>
+    {% endif %}
+  {% else %}
+    {% if page.categories.size > 1 %}
+      <span class="categories"> dans les catégories {{ page.categories | category_links }}</span>
+    {% else %}
+      <span class="categories"> dans la catégorie {{ page.categories | category_links }}</span>
+    {% endif %}
+  {% endif %}
+
+</span>
+{% endunless %}

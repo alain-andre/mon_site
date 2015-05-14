@@ -1,0 +1,82 @@
+/**
+ * Balises HTML
+ */
+body {
+  background-image: url("/images/html_bg.png");
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  font-family: $base-font-family;
+}
+
+a {
+  color: $solar-blue;
+}
+
+a:hover {
+  color: $solar-blue-dark;
+}
+
+/**
+ * Partie principale
+ */
+.post {
+  padding: 1em;
+  background-color: rgba($grey-color, .1);
+  @include shadow-box();
+}
+.post-footer {
+  margin: 1em;
+  padding: 1em;
+}
+.home {
+  padding: 1em;
+  background-color: rgba($red-color, .1);
+  @include shadow-box();
+}
+.home h1 {
+  text-align: center;
+}
+
+/**
+ * Footer
+ */
+.to-top {
+  width: 80px;
+  position: fixed;
+  text-align: center;
+  vertical-align: middle;
+  bottom: 5em;
+  right: 5em;
+}
+.to-top a span {
+  width: 1.2em;
+}
+.to-top a:hover {
+  background: rgba($grey-color, .3);
+}
+.to-top a {
+  display: none;
+  font-size: 4em;
+  transition: all .2s;
+  background: rgba($grey-color, .1);
+  border-radius: .2em !important;
+}
+.to-top .active {
+  display: block;
+}
+
+footer {
+  border-bottom: dotted .1em $grey-color;
+  padding: 1em;
+}
+.footer {
+  border-top: solid .1em $grey-color;
+  padding: 1em;
+  height: 100px;
+  margin-top: 5em;
+}
+.copy{
+  text-align: center;
+}

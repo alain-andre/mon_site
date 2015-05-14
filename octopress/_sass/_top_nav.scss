@@ -1,0 +1,34 @@
+/**
+ * Barre de navigation superieure
+ */
+#topNav {
+    border-top: 0.2em solid $solar-blue;
+    margin-bottom: 1em;
+}
+#topNav ul {
+    width: 100%;
+}
+#topNav li {
+    border-left: .1em solid $grey-color;
+    font-family: $base-font-family;
+    font-size: 150%;
+    width: 14%;
+}
+#topNav li:last-child{
+    border-right: .1em solid $grey-color;
+}
+#topNav li a {
+    border-top: 2px solid transparent;
+    transition: all 1s;
+    margin-top: -.25em;
+    text-align: center;
+}
+#topNav li a:hover {
+    background-color: transparent;
+    border-top-color: $red-color;
+    text-shadow: rgba($red-color, .2) 0 0 .1em;
+}
+
+#topNav input {
+    margin: .25em 0 .25em .25em;
+}

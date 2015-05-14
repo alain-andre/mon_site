@@ -1,0 +1,49 @@
+/**
+ * Description des articles par catégorie
+ */
+#blog-archives time {
+  position: absolute;
+  text-align: right;
+  left: 0em;
+  top: 3em;
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+#blog-archives h1 {
+  text-align: left;
+  padding-left: 2.5em;
+}
+
+#blog-archives h2 {
+  margin-bottom: 0.3em;
+  font-weight: normal;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  float: left;
+  color: $grey-color;
+}
+
+#blog-archives article {
+  padding: .1em 4.5em 0 0;
+  position: relative;
+  margin-left: 5em;
+}
+
+#blog-archives footer {
+  padding: .5em 1em;
+  color: $grey-color;
+}
+
+#blog-archives a {
+  transition: .5s;
+  text-decoration: none !important;
+}
+
+time {
+  color: $grey-color;
+}
+
+article h2:first-child, article header + h2 {
+  background: none repeat scroll 0% 0% transparent;
+}
