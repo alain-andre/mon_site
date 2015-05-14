@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.0.0
 - 1.9.3
-script: bundle exec jekyll build --source octopress
+script: jekyll build --source octopress
 deploy:
   provider: heroku
   api_key:
