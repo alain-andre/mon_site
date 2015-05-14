@@ -133,6 +133,6 @@ DEPENDENCIES
   jekyll-assets
   nokogiri
   octopress (~> 3.0.0.rc)
-  sass (>= 3.3.13, < 3.5)
+  sass (>= 3.3.13)
   stringex
   uglifier

@@ -3,3 +3,10 @@ rvm:
 - 2.0.0
 - 1.9.3
 script: bundle exec jekyll build --source octopress
+deploy:
+  provider: heroku
+  api_key:
+    secure: GvMuv4JRP8Bz/nU4Qnk/LyqhN5KhBXJuR4M1Uzb+86HHA6gYSBJSuBgJhv8qz/vadUWDWtPGXXYdGTbV5OfzPmOQczVTkb/zUr0JWHkI8DPcAyRX64CRmWqKtv+PYzdWiEoyhqHmWmCKDdABnK2kAy/VVOsouMQI5/IrRb+ezG32KmmA10hBZe9pPzkh+nU6bmoeYh2Z3IL9moqSaC2Lk7ulzR3FrRG1OhPJGcriL4bgbiEre8x9Oq90KOiwbykHkIFLlBVP6GALVLicnNDrYtCVNJQzEQqHm0PHU1GZcstS4YvBWU0bGK349C8Faj1iwVW6ZAaVoBEPpLrI412gIKo8QBLWlvbB6rlZsLPUI7SOSrkb2dEKSjnEKwXbyibr8FdjxtBlmdirJ1yBBIEyLOl/B3RtchjOlOYBTtYmAx4PIMHX8JyIuvWoLOdP1Fs61OCbwX2XZpOKXFMYQM2Asg1lLv8l4uiZRr7DODu9xF6x8KZPze4vpLfiFv3zVWfQrmSDXkQgx/HR5+fGTTFojlBszshQhG9rnjyDjC1x/JjzZe1/iVgXF/P+k+S3/rBC10ssXrmwNnlj7JfbJqZ/1mPmWYcwr462k2xme2KXR9bw/pea2G470qyfstFj8kUPEhacZ2GBFXB8e3tk38zLSk5fJUoySx5LDk9LHK0jDqo=
+  app: alain-andre-fr
+  on:
+    repo: alain-andre/mon_site
