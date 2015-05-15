@@ -16,3 +16,8 @@ gem 'sass', ">= 3.3.13"           # And we want to write our stylesheets using S
 gem 'stringex'
 gem 'compass', "~> 1.0.1"
 gem 'nokogiri'
+
+#
+# Lancer jekyll sur heroku
+#
+gem 'rack-jekyll'
