@@ -1,14 +1,13 @@
-use Rack::Static,
-  :urls => ["/images", "/js", "/css"],
-  :root => "_site"
+require 'rack'
+require 'rack/contrib/try_static'
 
-run lambda { |env|
-  [
-    200,
-    {
-      'Content-Type'  => 'text/html',
-      'Cache-Control' => '_site, max-age=86400'
-    },
-    File.open('_site/index.html', File::RDONLY)
-  ]
+# Serve files from the build directory
+use Rack::TryStatic,
+  root: 'octopress',
+  urls: %w[/],
+  try: ['.html', 'index.html', '/index.html']
+
+run lambda{ |env|
+  four_oh_four_page = File.expand_path("../build/404/index.html", __FILE__)
+  [ 404, { 'Content-Type'  => 'text/html'}, [ File.read(four_oh_four_page) ]]
 }
