@@ -38,3 +38,5 @@ github_user: alain-andre
 github_repo_count: 3
 github_show_profile_link: true
 github_skip_forks: true
+
+exclude: [vendor]
