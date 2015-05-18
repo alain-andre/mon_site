@@ -3,7 +3,7 @@ require 'rack/contrib/try_static'
 
 # Serve files from the build directory
 use Rack::TryStatic,
-  root: 'octopress',
+  root: '_build',
   urls: %w[/],
   try: ['.html', 'index.html', '/index.html']
 
