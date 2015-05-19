@@ -6,7 +6,7 @@ use Rack::TryStatic, {
   urls: %w[/],
   try:  %w[
     .html index.html /index.html
-    .js .css .xml
+    .js .css .xml .json
     .eot .svg .ttf .woff .woff2
   ]
 }
