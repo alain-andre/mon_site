@@ -1,13 +1,17 @@
-require 'rack'
-require 'rack/contrib/try_static'
+require "rack/contrib/try_static"
+require "rack/contrib/not_found"
 
-# Serve files from the build directory
-use Rack::TryStatic,
-  root: '_build',
+use Rack::TryStatic, {
+  root: "_site",
   urls: %w[/],
-  try: ['.html', 'index.html', '/index.html']
+  try:  %w[
+    .html index.html /index.html
+    .js .css .xml
+    .eot .svg .ttf .woff .woff2
+  ]
+}
 
 run lambda{ |env|
-  four_oh_four_page = File.expand_path("../build/404/index.html", __FILE__)
+  four_oh_four_page = File.expand_path("../_site/404/index.html", __FILE__)
   [ 404, { 'Content-Type'  => 'text/html'}, [ File.read(four_oh_four_page) ]]
 }
