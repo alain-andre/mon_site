@@ -20,4 +20,5 @@ gem 'nokogiri'
 #
 # Lancer jekyll sur heroku
 #
+gem 'rack-contrib'
 gem 'rack-jekyll'

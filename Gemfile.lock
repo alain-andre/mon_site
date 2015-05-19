@@ -96,6 +96,8 @@ GEM
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
     rack (1.6.1)
+    rack-contrib (1.2.0)
+      rack (>= 0.9.1)
     rack-jekyll (0.3.5)
       jekyll
       rack
@@ -136,6 +138,7 @@ DEPENDENCIES
   jekyll-assets
   nokogiri
   octopress (~> 3.0.0.rc)
+  rack-contrib
   rack-jekyll
   sass (>= 3.3.13)
   stringex
