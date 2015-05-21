@@ -1,10 +1,10 @@
-{% if site.google_analytics_tracking_id %}
+{% if site.piwik_analytics_tracking_id %}
 <script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="//alain-andre.fr/piwik/";
+    var u="{{site.piwik_analytics_url}}";
     _paq.push(['setTrackerUrl', u+'piwik.php']);
     _paq.push(['setSiteId', {{site.piwik_analytics_tracking_id}}]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];

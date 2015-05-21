@@ -24,7 +24,8 @@ disqus_short_name: alainandre
 disqus_show_comment_count: false
 
 # Piwik Analytics
-piwik_analytics_tracking_id: UA-7825560-3
+piwik_analytics_tracking_id: 1
+piwik_analytics_url: //alain-andre.fr/piwik/
 
 # Facebook Like
 facebook_like: true
