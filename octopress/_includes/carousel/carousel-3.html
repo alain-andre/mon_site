@@ -1,65 +1,19 @@
-<slide active="">
-  <img src="{{url}}/images/bdx_3.svg" class="" >
+<slide active="slide.active">
+  <img src="{{url}}/images/bdx_1.svg" class="" >
   <div class="carousel-divs">
-    <div>
-      <h1>
-        Consultez mon <a href="{{url}}/images/cv_alain_andre.pdf" target="_blank">CV</a> pour plus d’informations.
-      </h1>
-    </div>
-
-    <div class="input-group animate-1">
-      <span class="input-group-addon blue">
-        <span class="fa fa-cubes"></span>
-      </span>
-      <label class="form-control" >
-        Frameworks principaux : 
-          <span class="fa fa-ruby-rails"></span> Ruby on Rails, 
-          <span class="fa fa-bootstrap"></span> Bootstrap, 
-          <span class="fa fa-angular"></span> AngularJS
-      </label>
-    </div>
-
-    <div class='input-group animate-2'>
-      <span class="input-group-addon blue">
-        <span class="fa fa-compass"></span>
-      </span>
-      <label class="form-control" >
-        Technologies principales : 
-          <span class="fa fa-html5"></span> (HTML5), 
-          <span class="fa fa-css3"></span> (CSS3), 
-          Ruby
-      </label>
-    </div>
-
-    <div class='input-group animate-3'>
-      <span class="input-group-addon blue" >
-        <span class="fa fa-comments"></span>
-      </span>
-      <label class="form-control" >
-        Environnements privilégiés : 
-          <span class="fa fa-linux"></span> (Linux), 
-          <span class="fa fa-git"></span> (Git), 
-          <span class="fa fa-twitter"></span> (Twitter),
-          <span class="fa fa-facebook"></span> (Facebook)
-      </label>
-    </div>
-
-    <div class='input-group animate-4'>
-      <span class="input-group-addon blue">
-        <span class="fa fa-eye"></span>
-      </span>
-      <label class="form-control" >
-        Centres d'interêts : 
-          <span class="fa fa-firefox"></span> Mozilla, 
-          <span class="fa fa-ubuntu"></span> Ubuntu, 
-          <span class="fa fa-french-tech"></span> French-tech, 
-          <span class="fa fa-gnu"></span> Logiciels libres, 
-          Voyages.
-      </label>
-    </div>
+    {% for post in site.posts limit: site.recent_posts %}
+      <div class="input-group animate-1">
+        <span class="input-group-addon blue">
+          <span class="fa fa-html5"></span>
+        </span>
+        <label class="form-control" >
+          <a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
+        </label>
+      </div>
+    {% endfor %}  
   </div>
 
   <div class="carousel-caption blue">
-    <p>Developpeur full-stack, je suis en veille technologique permanente.</p>
+    <p>Mes derniers articles publiés !</p>
   </div>
 </slide>

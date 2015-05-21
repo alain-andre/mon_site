@@ -17,8 +17,7 @@
 }
 .carousel-divs {
   position: absolute;
-  height: 400px;
-  bottom: 0px;
+  bottom: 35%;
   width: 60%;
   margin-left: 20%;
   vertical-align: middle;
@@ -34,7 +33,7 @@
   background-color: rgba($solar-blue, .6);
 }
 .carousel-divs .form-control {
-  background-color: rgba(white, .6);
+  background-color: rgba(white, .85);
   color: $grey-color-dark;
   text-align: left;
 }

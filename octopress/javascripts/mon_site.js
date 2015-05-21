@@ -27,6 +27,5 @@ mon_site.controller('SearchCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.articles = data.entries;
     $scope.ordre = "date";
   });
-
-  
 }]);
+

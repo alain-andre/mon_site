@@ -33,9 +33,12 @@ facebook_like: true
 twitter_user: al1_andre
 twitter_tweet_button: true
 
+# liste des derniers articles
+recent_posts: 4
+
 # Github repositories
 github_user: alain-andre
-github_repo_count: 3
+github_repo_count: 4
 github_show_profile_link: true
 github_skip_forks: true
 
