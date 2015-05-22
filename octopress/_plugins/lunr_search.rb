@@ -61,7 +61,7 @@ module Jekyll
       filename = 'search.json'
       
       puts "====== writting #{filename} to #{site.source}"
-      File.open(File.join(site.source, filename), "w") do |file|
+      File.open(File.join(site.source, 'assets', filename), "w") do |file|
         file.write(json)
       end
 
