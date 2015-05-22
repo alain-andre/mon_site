@@ -3,7 +3,7 @@ require "rack/contrib/not_found"
 
 use Rack::TryStatic, {
   root: "_site",
-  urls: %w[/ .],
+  urls: %w[/],
   try:  %w[
     .html index.html /index.html
     .js .css .xml .json
