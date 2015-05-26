@@ -59,9 +59,11 @@ module Jekyll
             
       # File I/O: create search.json file and write out pretty-printed JSON
       filename = 'search.json'
-      
-      puts "====== writting #{filename} to #{site.source}/datas"
-      File.open(File.join(site.source, 'datas', filename), "w") do |file|
+      unless File.exists?(site.dest)
+        FileUtils.mkdir_p(site.dest)
+      end
+      puts "====== writting #{filename} to #{site.dest}/datas"
+      File.open(File.join(site.dest, 'datas', filename), "w") do |file|
         file.write(json)
       end
 
