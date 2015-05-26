@@ -1,6 +1,11 @@
 <slide active="slide.active">
   <img src="{{url}}/images/bdx_1.svg" class="" >
   <div class="carousel-divs">
+    <div>
+      <h1>
+        Consultez mes dernières articles.
+      </h1>
+    </div>
     {% for post in site.posts limit: site.recent_posts %}
       <div class="input-group animate-1">
         <span class="input-group-addon blue">
