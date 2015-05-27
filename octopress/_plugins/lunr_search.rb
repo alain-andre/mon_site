@@ -78,9 +78,8 @@ module Jekyll
       File.open(File.join(site.dest, filename), "w") do |file|
         file.write(json)
       end
-      # Keep the sitemap.xml file from being cleaned by Jekyll
+      # Keep the search.json file from being cleaned by Jekyll
       site.static_files << Jekyll::SearchJson.new(site, site.dest, "/", filename)
-
     end
 
   private
