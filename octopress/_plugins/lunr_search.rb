@@ -5,7 +5,7 @@ require 'nokogiri'
 module Jekyll
 
   # Recover from strange exception when starting server without --auto
-  class SearchJson < StaticFile
+  class SearchJson < Jekyll::StaticFile
     def write(dest)
       begin
         super(dest)
@@ -74,12 +74,12 @@ module Jekyll
       unless File.exists?(site.dest)
         FileUtils.mkdir_p(site.dest)
       end
-      puts "====== writting #{filename} to #{site.dest}/datas"
-      File.open(File.join(site.dest, 'datas', filename), "w") do |file|
+      puts "====== writting #{filename} to #{site.dest}"
+      File.open(File.join(site.dest, filename), "w") do |file|
         file.write(json)
       end
       # Keep the sitemap.xml file from being cleaned by Jekyll
-      site.static_files << Jekyll::SearchJson.new(site, site.dest, "/datas/", filename)
+      site.static_files << Jekyll::SearchJson.new(site, site.dest, "/", filename)
 
     end
 
