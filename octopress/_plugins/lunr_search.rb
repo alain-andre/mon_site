@@ -75,7 +75,7 @@ module Jekyll
         FileUtils.mkdir_p("#{site.dest}/datas/")
       end
       puts "====== writting #{filename} to #{site.dest}/datas/"
-      File.open(File.join(site.dest, "datas/", filename), "w") do |file|
+      File.open(File.join(site.source, "datas/", filename), "w") do |file|
         file.write(json)
       end
       # Keep the search.json file from being cleaned by Jekyll
