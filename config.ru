@@ -8,6 +8,11 @@ use Rack::TryStatic, {
     .html index.html /index.html
     .js .css .xml .json
     .eot .svg .ttf .woff .woff2
+  ],
+  :header_rules => [
+    # Cache all static files in public caches (e.g. Rack::Cache)
+    #  as well as in the browser
+    [%w[json], {'Content-Type' => 'application/json'}]
   ]
 }
 
