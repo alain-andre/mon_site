@@ -23,7 +23,7 @@ mon_site.controller('BodyCtrl', ['$scope', '$sce', '$document', function ($scope
 }]);
 
 mon_site.controller('SearchCtrl', ['$scope', '$http', function($scope, $http) {
-  $http.get('{{url}}/search.json').success(function(data) {
+  $http.get('{{url}}/datas/search.json').success(function(data) {
     $scope.articles = data.entries;
     $scope.ordre = "date";
   });

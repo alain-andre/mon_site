@@ -76,7 +76,7 @@ module Jekyll
       end
       puts "====== writting #{filename} to #{site.dest}/datas/"
       File.open(File.join(site.dest, "datas/", filename), "w") do |file|
-        file.write(json)
+        file.write("[#{json}]")
       end
       # Keep the search.json file from being cleaned by Jekyll
       site.static_files << Jekyll::SearchJson.new(site, "#{site.dest}/datas/", "/", filename)
