@@ -1,5 +1,6 @@
 require "rack/contrib/try_static"
 require "rack/contrib/not_found"
+require "rack/contrib/jsonp"
 
 use Rack::TryStatic, {
   root: "_site",
