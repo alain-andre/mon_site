@@ -26,7 +26,8 @@ rails _4.0.0_ new angular_template --skip-javascript
 
 On y ajoute la gem `angularjs-rails` et `haml`
 
-```ruby Gemfile
+```ruby 
+# Gemfile
 gem 'angularjs-rails', '~> 1.2.16'
 gem 'haml'
 ```
