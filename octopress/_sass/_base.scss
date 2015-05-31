@@ -42,6 +42,16 @@ a:hover, a:active, a:focus {
 }
 
 /**
+ * Articles
+ */ 
+article p {
+  text-align: justify;
+}
+article img {
+  margin: 1em;
+}
+
+/**
  * Footer
  */
 .to-top {
