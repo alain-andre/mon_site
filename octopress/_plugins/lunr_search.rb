@@ -79,7 +79,8 @@ module Jekyll
         file.write(json)
       end
       # Keep the search.json file from being cleaned by Jekyll
-      site.static_files << Jekyll::SearchJson.new(site, "#{site.dest}/datas/", "/", filename)
+      Jekyll::SearchJson.new(site, "#{site.dest}/datas/", "/", filename)
+      site.keep_files << filename
     end
 
   private

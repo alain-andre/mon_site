@@ -133,7 +133,8 @@ module Jekyll
       file.close
 
       # Keep the sitemap.xml file from being cleaned by Jekyll
-      site.static_files << Jekyll::SitemapFile.new(site, site.dest, "/", SITEMAP_FILE_NAME)
+      Jekyll::SitemapFile.new(site, site.dest, "/", SITEMAP_FILE_NAME)
+      site.keep_files << SITEMAP_FILE_NAME
     end
 
     # Create url elements for all the posts and find the date of the latest one
