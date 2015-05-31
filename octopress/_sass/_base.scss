@@ -13,9 +13,11 @@ h1, h2, h3 {
 a {
   color: $solar-blue;
 }
-
 a:hover {
   color: $solar-blue-dark;
+}
+a:hover, a:active, a:focus {
+  outline: 0;
 }
 
 /**
