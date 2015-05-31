@@ -13,7 +13,7 @@ tags:
   - debuter
   - php-activerecord
 ---
-Au premier abord, je suis très heureux de retrouver une architecture ressemblant à celle de Ruby on Rails. Mais rapidement, la console rails me manque. Globalement, j'ai trouvé l'installation rapide et la documentation assez complète. Le liens à la DB se fait par une sorte d'activeRecord à la CI qui ne me branche pas trop mais bon. J'ai vu nombre de questions sur **stackoverflow** à propos d'ActiveRecord sur CodeIgniter, je décide donc de implanter dans mon projet.
+Au premier abord, je suis très heureux de retrouver une architecture ressemblant à celle de Ruby on Rails. Mais rapidement, la console rails me manque. Globalement, j'ai trouvé l'installation rapide et la documentation assez complète. Le liens à la DB se fait par une sorte d'activeRecord à la CI qui ne me branche pas trop mais bon. J'ai vu nombre de questions sur **stackoverflow** à propos d'ActiveRecord sur CodeIgniter, je décide donc de l'implanter dans mon projet.
 
 ## Installer php-activerecord
 
@@ -53,7 +53,8 @@ Voilà. C'est bien mignon tout ça mais moi je voudrais retrouver mes migrations
 
 La [documentation][4] permet de comprendre comment fonctionne les migrations sous codeigniter. Malheureusement il n'y a pas de console disponible permettant de faire une génération, un reset ou autre. Il faut créer un contrôleur **migrate** qui lancera les migrations de la version définie. On va donc commencer par créer une migration pour les *users* dans le fichier suivant :
 
-```php application/migrations/001_add_users.php
+```php 
+// application/migrations/001_add_users.php
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Migration_Add_users extends CI_Migration {
@@ -90,6 +91,7 @@ Une fois fait, nous allons modifier le paramètre **$config['migration_version']
 Tout est configuré, nous pouvons maintenant créer `application/controllers/migrate.php` qui sera appelé pour faire nos migrations. Nous allons protéger l'accès à ce script par une session qui forcera la connexion en tant qu'administrateur.
 
 ```php
+// application/controllers/migrate.php
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Migrate extends CI_Controller {
