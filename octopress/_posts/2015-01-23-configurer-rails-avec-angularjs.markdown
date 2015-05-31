@@ -12,7 +12,7 @@ tags :
   - webapp
 ---
 
-Ce post est lié à ma tentative de créer un [Générateur Angular on Rails](/blog/2014/06/26/un-generateur-angular-on-rails/)
+Ce post est lié à ma tentative de créer un [Générateur Angular on Rails](ruby%20on%20rails/2014/06/26/un-generateur-angular-on-rails/)
 
 [Monterail](http://monterail.com/) utilise [rails-assets](https://rails-assets.org/) afin de charger les gems *lodash*, *angular*, *angular-cache*, *angular-ui-router* et *angular-translate* issues de [Bower](http://bower.io). Pour cela, il suffit d'ajouter dans le *Gemfile* la ligne `source 'https://rails-assets.org'` ainsi que les appels aux gems de rails-asset de cette façon : `gem 'rails-assets-BOWER_PACKAGE_NAME'`.
 

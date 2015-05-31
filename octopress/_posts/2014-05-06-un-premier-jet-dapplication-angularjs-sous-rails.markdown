@@ -30,6 +30,7 @@ Mime::Type.register "application/x-web-app-manifest+json", :webapp
 ```
 
 Et on peut créer notre manifest.
+
 ```javascript 
 // public/manifest.webapp
 {
