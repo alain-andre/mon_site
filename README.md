@@ -5,11 +5,11 @@ Mon site statique personnel généré avec [jekyll](http://jekyllrb.com/) et dé
 
 ## Commandes [octopress](https://github.com/octopress/octopress)
 
-- new post <TITLE>    # Add a new post to your site
-- new page <PATH>     # Add a new page to your site
-- new draft <TITLE>   # Add a new draft post to your site
-- publish <POST>      # Publish a draft from _drafts to _posts
-- unpublish <POST>    # Search for a post and convert it into a draft
+- new post &lt;TITLE&gt;    # Add a new post to your site
+- new page &lt;PATH&gt;     # Add a new page to your site
+- new draft &lt;TITLE&gt;   # Add a new draft post to your site
+- publish &lt;POST&gt;      # Publish a draft from _drafts to _posts
+- unpublish &lt;POST&gt;    # Search for a post and convert it into a draft
 - isolate [POST]      # Stash all posts but the one you're working on for a faster build
 - integrate           # Restores all posts, doing the opposite of the isolate command
 
