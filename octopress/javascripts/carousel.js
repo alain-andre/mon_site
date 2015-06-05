@@ -12,4 +12,6 @@ mon_site.controller('CarouselCtrl', ['$scope', '$http', function ($scope, $http)
       $scope.githubs = data;
     });
 
+    if(navigator.userAgent.indexOf('Firefox') != -1) $scope.isff = true;
+    else $scope.isff = false;
 }]);
