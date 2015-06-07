@@ -12,7 +12,7 @@ tags:
   - pdf
   - wkhtmltopdf
 ---
-Depuis mon installation en local sur mon Ubuntu (cf ce [post][1]), je n'arrive pas à afficher un **header** ou un **footer** dans mes PDFs. Après avoir cherché partout dans la galaxie du web, j'ai finalement trouvé une piste qui s'est avérée très inintéressante et même salvatrice. Je n'aime pas installé des composants à la main sur mon système, mais là, c'est une obligation.
+Depuis mon installation en local sur mon Ubuntu (cf cet [article]({{url}}/heroku/ruby on rails/2013/10/23/generer-des-pdf-simplement-avec-wkhtmltopdf-sur-heroku.html)), je n'arrive pas à afficher un **header** ou un **footer** dans mes PDFs. Après avoir cherché partout dans la galaxie du web, j'ai finalement trouvé une piste qui s'est avérée très inintéressante et même salvatrice. Je n'aime pas installé des composants à la main sur mon système, mais là, c'est une obligation.
 
 ## Première étape
 
@@ -24,7 +24,7 @@ sudo apt-get remove --purge wkhtmltopdf
 
 ## Deuxième étape
 
-Ensuite on va télécharger l'archive qui nous intéresse chez [github.com/wkhtmltopdf][2]
+Ensuite on va télécharger l'archive qui nous intéresse chez [github.com/wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/)
 
 `openssl build-essential xorg libssl-dev` doivent être installé sur votre machine.
 
@@ -43,6 +43,3 @@ Pour finalement la copier dans notre /usr/bin
 ```bash
 sudo cp wkhtmltopdf /usr/bin/wkhtmltopdf
 ```
-
- [1]: http://www.alain-andre.fr/?p=141
- [2]: https://github.com/wkhtmltopdf/wkhtmltopdf/releases/
