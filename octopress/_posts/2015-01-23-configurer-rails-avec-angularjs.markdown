@@ -5,8 +5,8 @@ title: "Configurer Rails avec AngularJS"
 date: 2015-01-23 20:13:10 +0100
 comments: true
 categories: 
-  - Ruby on Rails
   - angularjs
+  - Ruby on Rails
 tags :
   - angular
   - webapp
