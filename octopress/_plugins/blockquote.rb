@@ -14,7 +14,7 @@
 #     <strong>Bobby Willis</strong><cite><a href="http://google.com/search?q=pants">The Search For Bobby's Pants</a>
 #   </blockquote>
 #
-require 'titlecase.rb'
+require_relative 'titlecase'
 
 module Jekyll
 
