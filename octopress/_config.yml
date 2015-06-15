@@ -3,7 +3,7 @@ title: Alain ANDRÉ
 email: wordsbybird@gmail.com
 description: > # Il s'agit de mon blog personnel sur lequel j'écris les problèmes et les résolutions de ce qui m'arrive lors de mes développements.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://127.0.0.1" # the base hostname & protocol for your site
+url: "http://www.alain-andre.fr" # the base hostname & protocol for your site
 twitter_username: al1_andre
 github_username: alain-andre
 category_dir: categories
