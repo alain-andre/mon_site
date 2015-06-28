@@ -14,7 +14,7 @@
 
   {% if site.facebook_like %}
   <li>
-    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+    <div class="fb-share-button" data-href="{{site.url}}{{post.url}}" data-layout="button"></div>
     {% include post/facebook_like.html %}
   </li>
   {% endif %}
