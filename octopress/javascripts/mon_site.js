@@ -28,3 +28,8 @@ mon_site.controller('SearchCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.ordre = "date";
   });
 }]);
+
+mon_site.controller('TopBar', ['$scope', '$http', function ($scope, $http) {
+  if(navigator.userAgent.indexOf('Firefox') != -1) $scope.isff = true;
+  else $scope.isff = false;
+}]);

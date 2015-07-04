@@ -1,9 +1,15 @@
 <header id="topBar">
   <div class="container">
-    <div class="pull-left hide_mobile">
+    <div class="pull-left hide_mobile" ng-controller="TopBar">
       <a class="logo" href="{{ url }}/index.html">
         <img src="{{ url }}/images/alain_andre.png" height="80px" />
       </a> 
+      <div class="pull-right" id="firefox-logo" ng-hide="isff">
+        <a href="https://www.mozilla.org/fr/firefox/new/" target="_blank">
+          <img src="{{ url }}/images/ff-logo.png" height="40px" />
+          Faites le choix de la liberté.<br/>Choisissez Firefox. 
+        </a>
+      </div>
     </div>
     <div class="pull-right">
       <a href="mailto:contact@alain-andre.fr">contact@alain-andre.fr</a>&nbsp;+33 637 700 504
