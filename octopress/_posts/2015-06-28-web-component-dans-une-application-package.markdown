@@ -80,7 +80,7 @@ Ne pouvant rien changer du côté du *manifeste*, je cherche chez Polymer s'il y
 Cet article était un peu vieux et l'option **--csp** ne fonctionne plus de la sorte. Aujourd'hui cette option a son propre [projet](https://github.com/PolymerLabs/crisper). Une fois votre application prête, il faut la *vulcaniser* avec l'option **--inline-script** afin d'intégrer dans votre code tous les scripts externes, puis passer le code généré à **crisper** pour obtenir un fichier *.html* et le *.js* qui contient tous les scripts.
 
 ```bash
-vulcanize index.html --inline-script | crisper --html build.html --js
+vulcanize index.html --inline-script --inline-css| crisper --html build.html --js
 build.js
 ```
 
