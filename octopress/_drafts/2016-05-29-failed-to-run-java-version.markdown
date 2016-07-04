@@ -5,6 +5,7 @@ date: 2016-05-29T18:50:02+02:00
 comments: true
 categories: 
  - Ionic
+ - AngularJs
 tags :
  - ionic
  - application hybride
