@@ -10,8 +10,7 @@ tags :
  - application hybride
 ---
 
-Je travaille depuis quelques mois sur un projet Ionic. Tout se passe bien au niveau installation et configuration mais un jour, 
-suite à une mise à jour de mon système d'exploitation, je suis incapable de compiler le projet pour Android.
+Je travaille depuis quelques mois sur un projet Ionic. Tout se passe bien au niveau installation et configuration mais un jour, suite à une mise à jour de mon système d'exploitation, je suis incapable de compiler le projet pour Android.
 
 ```
 $ ionic build android
@@ -31,8 +30,7 @@ Error: /home/alain/01_projets/xxx/mobile/platforms/android/cordova/build: Comman
     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 ```
 
-Interloqué par ce subit arret de ce qui fonctionnait, je commence à me demander si mes fichiers de configuration n'ont pas été touché lors 
-de la mise à jour système, je regarde alors l'état de mon `~./bashrc` qui n'a pas bougé.
+Interloqué par ce subit arret de ce qui fonctionnait, je commence à me demander si mes fichiers de configuration n'ont pas été touché lors de la mise à jour système, je regarde alors l'état de mon `~./bashrc` qui n'a pas bougé.
 
 ```bash
 # Android Dev PATH
@@ -41,8 +39,7 @@ export PATH=${PATH}:~/android-studio/tools
 export PATH=${PATH}:~/android-studio/platform-tools
 ```
 
-Je reste bloqué sur cette phrase insultante à mes yeux : `You may not have the required environment or OS to build this project` 
-et commence à inspecter ma configuration système. Un petit `java -version` me confime que j'ai bien la *1.8* d'installé.
+Je reste bloqué sur cette phrase insultante à mes yeux : `You may not have the required environment or OS to build this project` et commence à inspecter ma configuration système. Un petit `java -version` me confime que j'ai bien la *1.8* d'installé.
 
 ```
 openjdk version "1.8.0_91"
@@ -87,5 +84,8 @@ lrwxrwxrwx 1 root root  51 mai   19 08:16 unpack200 -> /usr/lib/jvm/java-8-openj
 lrwxrwxrwx 1 root root  61 mai   19 08:16 unpack200.1.gz -> /usr/lib/jvm/java-8-openjdk-amd64/jre/man/man1/unpack200.1.gz
 ```
 
-Rien, tout est normal, je n'en peux plus. Et tout d'un coup, je me dit que le **JRE* est disponible mais Android lui 
-recherche le **JDK** 
+Rien ! Tout est normal; je n'en peux plus. 
+
+Et tout d'un coup, je me dit que le **JRE** est disponible mais Android lui, recherche le **JDK**. Je passe donc la commande magique `apt-get install openjdk-8-jdk` et voilà, ma compilation refonctionne comme par magie. Heureusement je n'ai pas à limiter mon build pour la version antérieure de java.
+
+Conclusion, si un jour après une mise à jour de votre système (et que vous n'avez pas regardé les impacts -oui je sais c'est moyen comme réaction-) on vous dit que voter JDK n'est pas présent, c'est qu'il ne l'est pas :p
