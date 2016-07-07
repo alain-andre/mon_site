@@ -89,6 +89,6 @@ Rien ! Tout est normal; je n'en peux plus.
 
 Et tout d'un coup, je me dit que le **JRE** est disponible mais Android lui, recherche le **JDK**. Je passe donc la commande magique `apt-get install openjdk-8-jdk` et voilà, ma compilation refonctionne comme par magie. Heureusement je n'ai pas à limiter mon build pour la version antérieure de java.
 
-Conclusion, si un jour après une mise à jour de votre système (et que vous n'avez pas regardé les impacts -oui je sais c'est moyen comme réaction-) on vous dit que votre JDK n'est pas présent, c'est qu'il ne l'est pas :p
+**Conclusion 1**, si un jour après une mise à jour de votre système (et que vous n'avez pas regardé les impacts -oui je sais c'est moyen comme réaction-) on vous dit que votre JDK n'est pas présent, c'est qu'il ne l'est pas :p
 
-Conclusion 2, avoir un environnement de developpement figé à une version particulière et pouvoir en changer quand cela nous chante (à la rbenv) serait un plus.
+**Conclusion 2**, avoir un environnement de developpement figé à une version particulière et pouvoir en changer quand cela nous chante (à la rbenv) serait un plus ... [docker](https://www.docker.com/) ?
