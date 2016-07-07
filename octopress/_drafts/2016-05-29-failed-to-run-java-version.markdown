@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Failed to run "java -version" : Je ne peux plus compiler mon projet Ionic"
+title: "Failed to run 'java -version' : Je ne peux plus compiler mon projet Ionic"
 date: 2016-05-29T18:50:02+02:00
 comments: true
 categories: 
@@ -13,7 +13,7 @@ tags :
 
 Je travaille depuis quelques mois sur un projet Ionic. Tout se passe bien au niveau installation et configuration mais un jour, suite à une mise à jour de mon système d'exploitation, je suis incapable de compiler le projet pour Android.
 
-```
+```bash
 $ ionic build android
 Running command: /home/alain/01_projets/xxx/mobile/hooks/after_prepare/010_add_platform_class.js /home/alain/01_projets/xxx/mobile
 add to body class: platform-android
@@ -42,7 +42,7 @@ export PATH=${PATH}:~/android-studio/platform-tools
 
 Je reste bloqué sur cette phrase insultante à mes yeux : `You may not have the required environment or OS to build this project` et commence à inspecter ma configuration système. Un petit `java -version` me confime que j'ai bien la *1.8* d'installé.
 
-```
+```bash
 openjdk version "1.8.0_91"
 OpenJDK Runtime Environment (build 1.8.0_91-8u91-b14-0ubuntu4~16.04.1-b14)
 OpenJDK 64-Bit Server VM (build 25.91-b14, mixed mode)
@@ -50,14 +50,14 @@ OpenJDK 64-Bit Server VM (build 25.91-b14, mixed mode)
 
 Je cherche donc le détails qui pourait bloquer :
 
-```
+```bash
 alain@alain-Sys1:/usr/bin$ ls -l | grep java 
 lrwxrwxrwx 1 root   root          22 mai   19 08:16 java -> /etc/alternatives/java
 ```
 
 Ok, allons voir ça de plus pret :
 
-```
+```bash
 alain@alain-Sys1:/etc/alternatives$ ls -l | grep java 
 lrwxrwxrwx 1 root root  46 mai   19 08:16 java -> /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 lrwxrwxrwx 1 root root  56 mai   19 08:16 java.1.gz -> /usr/lib/jvm/java-8-openjdk-amd64/jre/man/man1/java.1.gz
