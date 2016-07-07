@@ -20,7 +20,8 @@ Windows a en effet peut de version facilement installable. Après avoir tenté d
 
 ## La spécification de la version de ruby
 Après avoir tenté de mettre tout le monde à la version disponible pour Windows, il s'est avéré plus simple et plus extensible de configurer la version dans l'environnement. Ceci a deux objectifs : 
-- Les utilisateurs de Windows créent une variable d'environnement *CUSTOM_RUBY_VERSION* à laquelle ils affectent la valeur de leur version de ruby
+
+- Les utilisateurs de Windows créent une variable d'environnement `CUSTOM_RUBY_VERSION` à laquelle ils affectent la valeur de leur version de ruby
 - Lors des tests en CI, il est possible de tester plusieurs versions de ruby
 
 ```ruby
